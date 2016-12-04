@@ -9,3 +9,4 @@ alias artm="php artisan make"
 alias cda="composer dump-autoload"
 alias gulpack='gulp webpack && echo "Last run: " && date'
 alias art="php artisan"
+alias "cd.."="cd .."

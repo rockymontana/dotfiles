@@ -1,0 +1,9 @@
+{
+  "require": {
+        "tightenco/collect": "^5.3"
+  },
+  "config": {
+    "vendor-dir": "vendor/composer",
+    "optimize-autoloader": true
+  },
+}

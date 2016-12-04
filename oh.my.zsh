@@ -1,9 +1,7 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/rm/.dotfiles/vendor/oh-my-zsh
 export DOTFILES=${HOME}/.dotfiles
+export ZSH=${DOTFILES}/vendor/oh-my-zsh
 
-
-ls ${DOTFILES}/zsh/*.zsh |while f= read -r 'config'; do source $config; done
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -63,6 +61,16 @@ export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
+# Load all files from $DOTFILES/zsh.rc.d directory
+if [ -d $DOTFILES/zsh.rc.d ]; then
+  for file in $DOTFILES/zsh.rc.d/*.zsh; do
+    source $file
+  done
+fi
+
+
+#ls ${DOTFILES}/zsh/*.zsh |while f= read -r 'config'; do ZSH_CONFIGS$config; echo $config; done
+
 # You may need to manually set your language environment
 export LC_ALL=sv_SE.UTF-8
 export LANG=en_US.UTF-8
@@ -89,5 +97,4 @@ export ARCHFLAGS="-arch x86_64"
 alias zconf="mate ~/.zshrc"
 #alias ohmyzsh="mate ~/.oh-my-zsh"
 alias brewski='brew update && brew upgrade --all && brew upgrade brew-cask; brew cleanup; brew cask cleanup; brew doctor'
-alias webbish="ssh rm@webbish.se"
 

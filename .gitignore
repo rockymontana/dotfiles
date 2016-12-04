@@ -1,2 +1,2 @@
-/zsh/private.zsh
+/zsh.rc.d/private.zsh
 /**/*.swp
