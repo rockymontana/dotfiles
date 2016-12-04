@@ -98,10 +98,9 @@ installDotfiles() {
 
         installComposer;
 
-        zshexec=`which zsh`;
-        echo "Changing shell from ${SHELL} to ${zshexec}";
+        echo "Changing shell from ${SHELL} to zsh";
         if $SHELL != $zshexec; then
-            chsh -s $zshexec;
+            chsh -s /usr/bin/zsh;
         fi;
 
         return 0;
