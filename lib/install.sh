@@ -67,7 +67,7 @@ installComposer() {
         read -p "Should I install it for you? (Y/n):" -n 1 -r
         if [[ ! $REPLY =~ ^[Yy]$ ]] || [ $REPLY -eq 0 ]; then
             echo 'running "brew install composer"';
-            brew install composer;
+            brew install homebrew/php/composer;
             echo "done installing composer.";
         else
             echo 'Skipping Composer...';
