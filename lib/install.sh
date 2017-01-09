@@ -100,7 +100,7 @@ installDotfiles() {
 
         echo "Changing shell from ${SHELL} to zsh";
         if $SHELL != $zshexec; then
-            chsh -s /usr/bin/zsh;
+            chsh -s /usr/local/bin/zsh;
         fi;
 
         return 0;
