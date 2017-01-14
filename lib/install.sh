@@ -95,7 +95,7 @@ installDotfiles() {
         git checkout -b 2016 origin/2016;
 
         ln -s $DOTFILES/oh.my.zsh $ZSHRC
-
+        touch ~/.hushlogin
         installComposer;
 
         echo "Changing shell from ${SHELL} to zsh";
