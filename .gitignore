@@ -1,3 +1,4 @@
 /zsh.rc.d/private.zsh
 /**/*.swp
 zsh/lib/private.zsh
+vendor/
