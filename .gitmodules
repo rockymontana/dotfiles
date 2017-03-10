@@ -1,0 +1,9 @@
+[submodule "themes/powerlevel9k"]
+	path = zsh/themes/powerlevel9k
+	url = https://github.com/bhilburn/powerlevel9k.git
+[submodule "vendor/oh-my-zsh"]
+	path = vendor/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "zsh/themes/powerlevel9k"]
+	path = zsh/themes/powerlevel9k
+	url = https://github.com/bhilburn/powerlevel9k.git

@@ -1,0 +1,10 @@
+{
+  "require": {
+    "tightenco/collect": "^5.3",
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "config": {
+    "vendor-dir": "vendor/composer",
+    "optimize-autoloader": true
+  }
+}
