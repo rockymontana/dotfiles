@@ -1,0 +1,10 @@
+{
+  "require": {
+    "guzzlehttp/guzzle": "^6.2",
+    "illuminate/support": "^5.4"
+  },
+  "config": {
+    "vendor-dir": "vendor/composer",
+    "optimize-autoloader": true
+  }
+}
