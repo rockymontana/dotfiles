@@ -8,3 +8,4 @@ vendor/
 /composer/*.pub
 .zhistory
 .zcomp*
+/vendor/prezto/modules/prompt/functions/prompt_powerlevel9k_setup
