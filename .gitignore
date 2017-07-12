@@ -1,4 +1,10 @@
-/zsh.rc.d/private.zsh
-/**/*.swp
+.zhistory
+.zcompdump
+**/*.swp
 zsh/private.zsh
 vendor/
+/composer/auth.json
+/composer/*.phar
+/composer/*.pub
+.zhistory
+.zcomp*
