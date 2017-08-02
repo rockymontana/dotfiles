@@ -39,5 +39,6 @@ prompt $ZSH_THEME
 #echo "prompt ${ZSH_THEME}"
 zstyle ':prezto:module:prompt' theme $ZSH_THEME
 
+
 # That's it. We're all done.
 echo "All Done! Have fun!"

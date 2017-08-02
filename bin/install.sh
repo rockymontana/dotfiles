@@ -37,5 +37,9 @@ if [[ "$OSTYPE" == darwin* ]]; then
   sh ./osx.sh
 fi
 
+echo "Installing Composer stuff"
+export COMPOSER_HOME=${DOTFILES}/composer
+cd ${DOTFILES}/composer
+composer install > /dev/null 2>&1
 echo "Everything installed!"
 source ${HOME}/.zshrc
