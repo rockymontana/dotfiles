@@ -1,14 +1,18 @@
+#! /bin/zsh
+
 DOTFILES=${HOME}/.dotfiles
+export DOTFILES=${DOTFILES}
 setopt EXTENDED_GLOB
 
 LINKFILES=(zlogin zlogout zpreztorc)
+
 # Backup old dotfiles directory
 if [[ -d ${DOTFILES} ]]; then
   time=`date +%s`
   mv ${DOTFILES} ${HOME}/.dotfiles.$time
-done
+fi
 
-git clone https://github.com/rockymontana/dotfiles.git ${DOTFILES}
+git clone -b prezto https://github.com/rockymontana/dotfiles.git ${DOTFILES}
 cd ${DOTFILES}
 git submodule update --init --recursive
 
