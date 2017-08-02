@@ -2,6 +2,7 @@
 
 DOTFILES=${HOME}/.dotfiles
 export DOTFILES=${DOTFILES}
+export COMPOSER_HOME=${DOTFILES}/composer
 set -o EXTENDED_GLOB
 
 # Backup old dotfiles directory
@@ -34,11 +35,13 @@ ln -s ${DOTFILES}/themes/powerline9k/prompt_powerlevel9k_setup ${DOTFILES}/vendo
 
 if [[ "$OSTYPE" == darwin* ]]; then
   echo "Setting up OSX related shananagans"
+  mv $COMPOSER_HOME/composer.osx.json $COMPOSER_HOME/composer.json
   sh ./osx.sh
+elif [[ "$OSTYPE" == linux* ]]; then
+  mv $COMPOSER_HOME/composer.nix.json $COMPOSER_HOME/composer.json
 fi
 
 echo "Installing Composer stuff"
-export COMPOSER_HOME=${DOTFILES}/composer
 cd ${DOTFILES}/composer
 composer install > /dev/null 2>&1
 echo "Everything installed!"
