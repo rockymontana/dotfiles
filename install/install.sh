@@ -2,7 +2,7 @@
 
 DOTFILES=${HOME}/.dotfiles
 export DOTFILES=${DOTFILES}
-set -o EXTENDED_GLOB
+setopt EXTENDED_GLOB
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
