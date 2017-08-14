@@ -10,11 +10,8 @@ alias cda="composer dump-autoload"
 
 # Laravel specific aliases
 alias art="php artisan"
-alias art="php artisan"
 alias arl="php artisan route:list"
 alias arc="php artisan route:clear"
-alias artm="php artisan make"
-alias gulpack='gulp webpack && echo "Last run: " && date'
 
 # Tmux
 alias tma='tmux attach -d -t'

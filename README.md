@@ -4,4 +4,4 @@ Use it, fork it, hack it... or don't :-)
 
 ## Install with cURL
 
-`sh -c "$(curl -fsSL https://raw.githubusercontent.com/rockymontana/dotfiles/master/bin/install.sh)"`
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/rockymontana/dotfiles/master/install/install.sh)"`

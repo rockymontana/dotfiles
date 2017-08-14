@@ -2,8 +2,19 @@
 
 DOTFILES=${HOME}/.dotfiles
 export DOTFILES=${DOTFILES}
-export COMPOSER_HOME=${DOTFILES}/composer
 set -o EXTENDED_GLOB
+
+# Check for Homebrew and install if we don't have it
+if test ! $(which brew); then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# Update Homebrew recipes
+brew update
+
+# Install all our dependencies with bundle (See Brewfile)
+brew tap homebrew/bundle
+brew bundle
 
 # Backup old dotfiles directory
 if [[ -d ${DOTFILES} ]]; then
@@ -12,7 +23,7 @@ if [[ -d ${DOTFILES} ]]; then
 fi
 
 echo 'Cloning dotfiles repo'
-git clone -b prezto https://github.com/rockymontana/dotfiles.git ${DOTFILES}  > /dev/null 2>&1
+git clone https://github.com/rockymontana/dotfiles.git ${DOTFILES}  > /dev/null 2>&1
 cd ${DOTFILES}
 echo "Done cloning repos"
 echo "Setting up submodules"
@@ -35,14 +46,15 @@ ln -s ${DOTFILES}/themes/powerline9k/prompt_powerlevel9k_setup ${DOTFILES}/vendo
 
 if [[ "$OSTYPE" == darwin* ]]; then
   echo "Setting up OSX related shananagans"
-  mv $COMPOSER_HOME/composer.osx.json $COMPOSER_HOME/composer.json
+  composerJSON = $DOTFILES/composer/composer.osx.json
   sh ./osx.sh
 elif [[ "$OSTYPE" == linux* ]]; then
-  mv $COMPOSER_HOME/composer.nix.json $COMPOSER_HOME/composer.json
+  composerJSON = $DOTFILES/composer/composer.nix.json
 fi
 
 echo "Installing Composer stuff"
-cd ${DOTFILES}/composer
-composer install > /dev/null 2>&1
+ln -s $composerJSON $COMPOSER_HOME/composer.json
+composer global install > /dev/null 2>&1
 echo "Everything installed!"
+
 source ${HOME}/.zshrc
