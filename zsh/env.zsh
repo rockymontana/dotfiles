@@ -1,4 +1,5 @@
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${DOTFILES}/bin:$HOME/.yarn/bin:${DOTFILES}/vendor/composer/vendor/bin:$PATH"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${DOTFILES}/bin:$HOME/.yarn/bin:${COMPOSER_HOME}/vendor/bin:$PATH"
+
 if [[ `uname` == 'Darwin' ]]; then
     export PATH="$PATH:$(brew --prefix homebrew/php/php71)/bin"
 fi
