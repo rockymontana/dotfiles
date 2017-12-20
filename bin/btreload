@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Shamelessly stolen from https://gist.github.com/nicolasembleton/afc19940da26716f8e90
+# Big up to the author for sharing this
+# Big down to  for having an unstable bluetooth driver ;)
+
+sudo kextunload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport
+sudo kextload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport
