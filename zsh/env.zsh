@@ -1,3 +1,4 @@
+export COMPOSER_HOME="${HOME}/.composer"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${DOTFILES}/bin:$HOME/.yarn/bin:${COMPOSER_HOME}/vendor/bin:$PATH"
 
 if [[ `uname` == 'Darwin' ]]; then

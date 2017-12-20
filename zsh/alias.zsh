@@ -13,6 +13,11 @@ alias art="php artisan"
 alias arl="php artisan route:list"
 alias arc="php artisan route:clear"
 
+# Git
+alias gs="git status"
+alias stash="git stash"
+alias nah="git reset --hard HEAD"
+
 # Tmux
 alias tma='tmux attach -d -t'
 
