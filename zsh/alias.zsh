@@ -13,6 +13,11 @@ alias art="php artisan"
 alias arl="php artisan route:list"
 alias arc="php artisan route:clear"
 
+# Node
+alias nrw="npm run watch"
+alias nrd="npm run dev"
+alias nrp="npm run production"
+
 # Git
 alias gs="git status"
 alias stash="git stash"
