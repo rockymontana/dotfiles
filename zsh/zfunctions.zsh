@@ -6,7 +6,3 @@ function tinker {
     command psysh
   fi
 }
-
-function homestead() {
-    ( cd ${HOME}/Development/homestead && vagrant $* )
-}

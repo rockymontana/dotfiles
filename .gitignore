@@ -12,3 +12,5 @@ composer/**/.htaccess
 .zcomp*
 vendor/prezto/modules/prompt/functions/prompt_powerlevel9k_setup
 **/cache
+conf/vscode/extensions
+vendor/prezto
