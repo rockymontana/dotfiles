@@ -5,7 +5,6 @@ tap 'caskroom/versions'
 tap 'homebrew/bundle'
 tap 'homebrew/dupes'
 tap 'homebrew/versions'
-tap 'homebrew/homebrew-php'
 
 # Make sure apps get installed in system Applications dir
 cask_args appdir: '/Applications'
@@ -31,10 +30,6 @@ brew 'tree'
 brew 'wget'
 
 # Development
-brew 'homebrew/homebrew-php/php71-mcrypt'
-brew 'homebrew/homebrew-php/php71-imagick'
-brew 'homebrew/homebrew-php/php71-redis'
-brew 'homebrew/homebrew-php/php71-intl'
 brew 'php-cs-fixer'
 brew 'mysql'
 
@@ -42,7 +37,6 @@ brew 'mysql'
 cask 'lastpass'
 cask 'spotify'
 cask 'spectacle'
-cask 'vlc'
 cask 'deluge'
 
 #---Files & Storage---#

@@ -3,7 +3,7 @@
 #--------------------------------------
 echo "Loading config..."
 # If this file isn't included from ~/.zshrc
-if [ -z ${DOTFILES} ]; then 
+if [ -z ${DOTFILES} ]; then
 	DOTFILES="${HOME}/.dotfiles"
 fi
 
@@ -24,11 +24,6 @@ if [[ -s "${DOTFILES}/.zpreztorc" ]]; then
   source "${DOTFILES}/.zpreztorc"
 fi
 
-# Load all zsh-files from $DOTFILES/zsh
-for config in ${DOTFILES}/zsh/^bootstrap.zsh(.N); do
-  source $config
-done
-
 # Now it's time to load the prompt autoload and then we should
 # initialize it so that we'll be able to use `prompt -s` to
 # try themes and save it to the config if it is awesome.
@@ -40,6 +35,10 @@ prompt $ZSH_THEME
 zstyle ':prezto:module:prompt' theme $ZSH_THEME
 
 
+# Load all zsh-files from $DOTFILES/zsh
+for config in ${DOTFILES}/zsh/^bootstrap.zsh(.N); do
+  source $config
+done
+
 # That's it. We're all done.
 echo "All Done! Have fun!"
-

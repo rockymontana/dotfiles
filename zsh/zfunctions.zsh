@@ -6,3 +6,7 @@ function tinker {
     command psysh
   fi
 }
+composer-link() {  
+    composer config repositories.local '{"type": "path", "url": "'$1'"}' --file composer.json
+}
+

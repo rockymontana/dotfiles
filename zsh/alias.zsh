@@ -2,7 +2,7 @@ alias zc="vim ~/.zshrc"
 alias zcr="vim ~/.zshrc && reload"
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy";
 
-alias brewski='brew update && brew upgrade && brew upgrade brew-cask; brew cleanup; brew cask cleanup; brew doctor'
+alias brewski='brew update && brew upgrade && brew upgrade brew-cask; brew cleanup; brew doctor'
 alias "cd.."="cd .."
 
 # PHP
@@ -30,8 +30,16 @@ alias nah="git reset --hard && git clean -df"
 alias tma='tmux attach -d -t'
 
 alias reload="source ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
-alias dev="cd ~/Development/"
+alias dev="cd ~/code/"
 alias sshkey="cat ~/.ssh/id_rsa.pub |pbcopy"
-alias sited="cd ~/Development/SiteDirect"
-alias swocs="composer make-docs && cat public/docs/swagger.json |pbcopy"
-alias valias="vim ~/.dotfiles/zsh/alias.zsh"
+alias sited="cd ~/code/SiteDirect"
+alias valias="vim ~/.dotfiles/zsh/alias.zsh && reload"
+
+alias ng="cd /Users/rm/code/NextGen/next-generation"
+alias modules="cd /Users/rm/code/NextGen/modules"
+alias pu="./vendor/bin/phpunit"
+alias puf="./vendor/bin/phpunit --filter $1"
+
+
+# Unalias
+unalias cp
