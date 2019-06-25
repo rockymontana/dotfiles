@@ -34,7 +34,6 @@ prompt $ZSH_THEME
 #echo "prompt ${ZSH_THEME}"
 zstyle ':prezto:module:prompt' theme $ZSH_THEME
 
-
 # Load all zsh-files from $DOTFILES/zsh
 for config in ${DOTFILES}/zsh/^bootstrap.zsh(.N); do
   source $config
