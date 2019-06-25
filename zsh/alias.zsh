@@ -25,6 +25,8 @@ alias nrp="npm run production"
 alias gs="git status"
 alias stash="git stash"
 alias nah="git reset --hard && git clean -df"
+alias pull="git pull"
+alias push="git push"
 
 # Tmux
 alias tma='tmux attach -d -t'
@@ -42,4 +44,6 @@ alias puf="./vendor/bin/phpunit --filter $1"
 
 
 # Unalias
-unalias cp
+if alias cp 2>/dev/null; then
+  unalias cp
+fi

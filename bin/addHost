@@ -5,13 +5,13 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 else
   if [ -z $2 ]; then 
-    host="192.168.10.10"
+    host="127.0.0.1"
   else
     host=$2
   fi
   echo "Adding $1"
   if [ -z $1 ]; then 
-    echo 'usage: addHost <domain> <host> - host is optional and will default to 192.168.10.10'
+    echo 'usage: addHost <domain> <host> - host is optional and will default to 127.0.0.1'
   else
     echo "${host}   ${1}" >> /etc/hosts
   fi
