@@ -22,11 +22,14 @@ alias nrd="npm run dev"
 alias nrp="npm run production"
 
 # Git
-alias gs="git status"
+alias status="git status"
 alias stash="git stash"
 alias nah="git reset --hard && git clean -df"
 alias pull="git pull"
 alias push="git push"
+alias merge="git merge $1"
+alias checkout="git checkout $1"
+alias gs="git status"
 
 # Tmux
 alias tma='tmux attach -d -t'
@@ -37,7 +40,6 @@ alias sshkey="cat ~/.ssh/id_rsa.pub |pbcopy"
 alias sited="cd ~/code/SiteDirect"
 alias valias="vim ~/.dotfiles/zsh/alias.zsh && reload"
 
-alias ng="cd /Users/rm/code/NextGen/next-generation"
 alias modules="cd /Users/rm/code/NextGen/modules"
 alias pu="./vendor/bin/phpunit"
 alias puf="./vendor/bin/phpunit --filter $1"
