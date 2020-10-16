@@ -34,11 +34,8 @@ alias tma='tmux attach -d -t'
 alias reload="source ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 alias dev="cd ~/code/"
 alias sshkey="cat ~/.ssh/id_rsa.pub |pbcopy"
-alias sited="cd ~/code/SiteDirect"
 alias valias="vim ~/.dotfiles/zsh/alias.zsh && reload"
 
-alias ng="cd /Users/rm/code/NextGen/next-generation"
-alias modules="cd /Users/rm/code/NextGen/modules"
 alias pu="./vendor/bin/phpunit"
 alias puf="./vendor/bin/phpunit --filter $1"
 
