@@ -24,6 +24,14 @@ if [[ -s "${DOTFILES}/.zpreztorc" ]]; then
   source "${DOTFILES}/.zpreztorc"
 fi
 
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
+
 # Now it's time to load the prompt autoload and then we should
 # initialize it so that we'll be able to use `prompt -s` to
 # try themes and save it to the config if it is awesome.

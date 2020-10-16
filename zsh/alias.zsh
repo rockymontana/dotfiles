@@ -22,11 +22,14 @@ alias nrd="npm run dev"
 alias nrp="npm run production"
 
 # Git
-alias gs="git status"
+alias status="git status"
 alias stash="git stash"
 alias nah="git reset --hard && git clean -df"
 alias pull="git pull"
 alias push="git push"
+alias merge="git merge $1"
+alias checkout="git checkout $1"
+alias gs="git status"
 
 # Tmux
 alias tma='tmux attach -d -t'
