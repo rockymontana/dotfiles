@@ -37,25 +37,17 @@ brew 'mysql'
 cask 'lastpass'
 cask 'spotify'
 cask 'spectacle'
-cask 'deluge'
 
 #---Files & Storage---#
-cask 'dropbox'
-cask 'google-drive'
 cask 'onedrive'
-cask 'filezilla'
 cask 'sourcetree'
-
-#---Browsers---#
-cask 'google-chrome'
 
 #---Communication---#
 cask 'slack'
-cask 'google-hangouts'
 
 #---Editors---#
 cask 'phpstorm'
-cask 'sublime-text3'
+cask 'visual-studio-code'
 
 #---DevTools---#
 cask 'sequel-pro'
@@ -63,16 +55,6 @@ cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'vagrant'
 cask 'vagrant-manager'
-
-# Quicklook
-cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'quicklook-csv'
-cask 'qlstephen'
-cask 'webpquicklook'
-cask 'betterzipql'
-cask 'qlimagesize'
 
 # Fonts
 cask 'font-sauce-code-powerline'
