@@ -30,7 +30,7 @@ alias push="git push"
 alias merge="git merge $1"
 alias checkout="git checkout $1"
 alias gs="git status"
-
+alias commit="git commit -m $1"
 # Tmux
 alias tma='tmux attach -d -t'
 
@@ -41,6 +41,9 @@ alias valias="vim ~/.dotfiles/zsh/alias.zsh && reload"
 
 alias pu="./vendor/bin/phpunit"
 alias puf="./vendor/bin/phpunit --filter $1"
+
+# Docker
+alias dr="docker-compose down && docker-compose up -d --build"
 
 
 # Unalias

@@ -59,5 +59,9 @@ ln -s $composerJSON ${COMPOSER_HOME}/composer.json
 composer global install > /dev/null 2>&1
 echo "Everything installed!"
 
+echo "Installing vim stufs"
+ln -s ${DOTFILES}/conf/vim/.vimrc ${HOME}/.vimrc
+ln -s ${DOTFILES}/conf/vim/.vim_runtime ${HOME}/.vim_runtime
+
 cd ${HOME}
 source ${HOME}/.zshrc
