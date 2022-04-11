@@ -12,7 +12,6 @@ export ZDOTDIR=${DOTFILES}
 
 # powerlevel needs to load some configurations before we init prezto.
 # So first of all, we need to load the powerlevel9k configuration.
-source ${DOTFILES}/conf/powerlevel9k.conf
 
 # Source Prezto.
 if [[ -s "${DOTFILES}/vendor/prezto/init.zsh" ]]; then
@@ -20,9 +19,9 @@ if [[ -s "${DOTFILES}/vendor/prezto/init.zsh" ]]; then
 fi
 
 # Source default prezto config
-if [[ -s "${DOTFILES}/.zpreztorc" ]]; then
-  source "${DOTFILES}/.zpreztorc"
-fi
+# if [[ -s "${DOTFILES}/.zpreztorc" ]]; then
+#   source "${DOTFILES}/.zpreztorc"
+# fi
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH

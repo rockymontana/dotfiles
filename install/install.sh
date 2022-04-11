@@ -30,13 +30,6 @@ if [[ -f ${HOME}/.zshrc ]]; then
 fi
 ln -s ${DOTFILES}/conf/zshrc.conf ${HOME}/.zshrc
 
-if [[ -f ${DOTFILES}/vendor/prezto/modules/prompt/functions/prompt_powerlevel9k_setup ]]; then
-  rm ${DOTFILES}/vendor/prezto/modules/prompt/functions/prompt_powerlevel9k_setup
-fi
-
- echo 'Symlinking Powerline9k to prezto'
- ln -s $DOTFILES/themes/powerline9k/prompt_powerlevel9k_setup ${DOTFILES}/vendor/prezto/modules/prompt/functions/prompt_powerlevel9k_setup
-
 if [[ "$OSTYPE" == darwin* ]]; then
   echo "Setting up OSX related shananagans"
   composerJSON=${DOTFILES}/composer/composer.osx.json
@@ -47,6 +40,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
   brew tap homebrew/bundle
   brew bundle
   sh ${DOTFILES}/install/osx.sh
+  brew install romkatv/powerlevel10k/powerlevel10k
   cd ${DOTFILES}
 
 elif [[ "$OSTYPE" == linux* ]]; then
