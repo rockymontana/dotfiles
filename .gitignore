@@ -8,8 +8,9 @@ composer/*.phar
 composer/*.pub
 composer/cache
 composer/**/.htaccess
-.zhistory
 .zcomp*
 vendor/prezto/modules/prompt/functions/prompt_powerlevel9k_setup
 **/cache
 conf/vscode/extensions
+.zsh_history
+conf/vscode/argv.json

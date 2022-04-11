@@ -1,3 +1,4 @@
 phpunit.xml
 /.idea
 /.vscode
+.DS_Store
