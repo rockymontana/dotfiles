@@ -1,5 +1,6 @@
 .zhistory
 .zcompdump
+.zsh_sessions
 **/*.swp
 zsh/private.zsh
 vendor/
