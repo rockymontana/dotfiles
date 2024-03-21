@@ -15,3 +15,5 @@ vendor/prezto/modules/prompt/functions/prompt_powerlevel9k_setup
 conf/vscode/extensions
 .zsh_history
 conf/vscode/argv.json
+conf/github-copilot/hosts.json
+conf/containers
