@@ -1,64 +1,169 @@
-# Taps
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
-tap 'homebrew/bundle'
-tap 'homebrew/dupes'
-tap 'homebrew/versions'
-
-# Make sure apps get installed in system Applications dir
-cask_args appdir: '/Applications'
-
-
-# Install GNU core utilities (those that come with OS X are outdated)
-brew 'coreutils'
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew 'findutils'
-
-brew 'zsh'
-
-# Install more recent versions of some OS X tools
-brew 'grep'
-
-# Install Binaries
-brew 'python'
-brew 'node'
-brew 'git'
-brew 'hub'
-brew 'tree'
-brew 'wget'
-
-# Development
-brew 'php-cs-fixer'
-brew 'mysql'
-
-# Install some common Apps
-cask 'lastpass'
-cask 'spotify'
-cask 'spectacle'
-
-#---Files & Storage---#
-cask 'onedrive'
-cask 'sourcetree'
-
-#---Communication---#
-cask 'slack'
-
-#---Editors---#
-cask 'phpstorm'
-cask 'visual-studio-code'
-
-#---DevTools---#
-cask 'sequel-pro'
-cask 'virtualbox'
-cask 'virtualbox-extension-pack'
-cask 'vagrant'
-cask 'vagrant-manager'
-
-# Fonts
-cask 'font-sauce-code-powerline'
-cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
-cask 'font-fira-code'
+tap "adoptopenjdk/openjdk"
+tap "dart-lang/dart"
+tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
+tap "homebrew/services"
+tap "kong/deck"
+tap "mike-engel/jwt-cli"
+tap "nicoverbruggen/cask"
+tap "romkatv/powerlevel10k"
+tap "sass/sass"
+tap "shivammathur/php"
+tap "ubuntu/microk8s"
+brew "lz4"
+brew "aom"
+brew "libssh2"
+brew "bat"
+brew "buildkit"
+brew "libxau"
+brew "colormake"
+brew "curl"
+brew "freetds"
+brew "krb5"
+brew "libpq"
+brew "php", restart_service: true, link: false
+brew "composer"
+brew "coreutils"
+brew "dnsmasq"
+brew "findutils"
+brew "gcc"
+brew "gdk-pixbuf"
+brew "gh"
+brew "git"
+brew "p11-kit"
+brew "unbound"
+brew "gnutls"
+brew "python@3.11"
+brew "harfbuzz"
+brew "librsvg"
+brew "graphviz"
+brew "grep"
+brew "httpie"
+brew "hub"
+brew "jenv"
+brew "jpeg", link: true
+brew "jq"
+brew "kubernetes-cli"
+brew "ldid"
+brew "libffi"
+brew "libiconv"
+brew "qemu"
+brew "lima"
+brew "mackup"
+brew "maven"
+brew "meilisearch"
+brew "minikube"
+brew "mysql", restart_service: true
+brew "neovim"
+brew "nghttp2"
+brew "nginx"
+brew "node"
+brew "openjdk@8"
+brew "openssl@1.1"
+brew "pandoc"
+brew "php-cs-fixer"
+brew "php@8.2", link: true
+brew "plantuml"
+brew "podman"
+brew "postgresql@14", restart_service: true
+brew "powerlevel10k"
+brew "prettier"
+brew "python@3.10"
+brew "python@3.9"
+brew "redis", restart_service: true
+brew "ruby"
+brew "skaffold"
+brew "subversion"
+brew "telnet"
+brew "tmux"
+brew "tree"
+brew "vite"
+brew "watch"
+brew "wget"
+brew "yarn"
+brew "zsh"
+brew "kong/deck/deck"
+brew "mike-engel/jwt-cli/jwt-cli"
+brew "sass/sass/sass"
+cask "discord"
+cask "docker"
+cask "drawio"
+cask "dropbox", args: { appdir: "/Applications" }
+cask "fanny"
+cask "figma"
+cask "google-drive", args: { appdir: "/Applications" }
+cask "iterm2"
+cask "lastpass", args: { appdir: "/Applications" }
+cask "lens"
+cask "microsoft-teams"
+cask "obsidian"
+cask "onedrive", args: { appdir: "/Applications" }
+cask "phpstorm", args: { appdir: "/Applications" }
+cask "podman-desktop"
+cask "postman"
+cask "quicklook-csv", args: { appdir: "/Applications" }
+cask "quicklook-json", args: { appdir: "/Applications" }
+cask "rectangle"
+cask "rocket"
+cask "runjs"
+cask "sequel-pro", args: { appdir: "/Applications" }
+cask "slack", args: { appdir: "/Applications" }
+cask "sourcetree", args: { appdir: "/Applications" }
+cask "spotify", args: { appdir: "/Applications" }
+cask "telegram"
+cask "vagrant", args: { appdir: "/Applications" }
+cask "vagrant-manager", args: { appdir: "/Applications" }
+cask "visual-studio-code"
+cask "vivaldi"
+cask "webpquicklook", args: { appdir: "/Applications" }
+vscode "adpyke.codesnap"
+vscode "asciidoctor.asciidoctor-vscode"
+vscode "bmewburn.vscode-intelephense-client"
+vscode "bradlc.vscode-tailwindcss"
+vscode "calebporzio.better-phpunit"
+vscode "cjhowe7.laravel-blade"
+vscode "d9705996.tighten-lint"
+vscode "davidanson.vscode-markdownlint"
+vscode "daylerees.rainglow"
+vscode "dbaeumer.vscode-eslint"
+vscode "equinusocio.vsc-material-theme"
+vscode "equinusocio.vsc-material-theme-icons"
+vscode "esbenp.prettier-vscode"
+vscode "evan-buss.font-switcher"
+vscode "github.copilot"
+vscode "github.copilot-chat"
+vscode "graphql.vscode-graphql-syntax"
+vscode "gruntfuggly.todo-tree"
+vscode "jakewilson.vscode-placeholder-images"
+vscode "knisterpeter.vscode-jira"
+vscode "luongnd.edge"
+vscode "mermade.openapi-lint"
+vscode "mikestead.dotenv"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.azure-account"
+vscode "ms-vscode.makefile-tools"
+vscode "ms-vscode.sublime-keybindings"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "mtxr.sqltools"
+vscode "neilbrayfield.php-docblocker"
+vscode "netcorext.uuid-generator"
+vscode "onecentlin.laravel-blade"
+vscode "patbenatar.advanced-new-file"
+vscode "pkief.material-icon-theme"
+vscode "pnp.polacode"
+vscode "redhat.fabric8-analytics"
+vscode "redhat.vscode-commons"
+vscode "redhat.vscode-xml"
+vscode "redhat.vscode-yaml"
+vscode "rioj7.vscode-json-validate"
+vscode "rvest.vs-code-prettier-eslint"
+vscode "stoplight.spectral"
+vscode "teamsdevapp.ms-teams-vscode-extension"
+vscode "vector-of-bool.gitflow"
+vscode "vmware.vscode-concourse"
+vscode "vmware.vscode-manifest-yaml"
+vscode "vue.volar"
+vscode "withfig.fig"
+vscode "xdebug.php-debug"
+vscode "yoavbls.pretty-ts-errors"

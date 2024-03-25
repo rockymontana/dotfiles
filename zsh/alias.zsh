@@ -15,12 +15,13 @@ alias art="php artisan"
 alias migrate="php artisan migrate"
 alias arl="php artisan route:list"
 alias arc="php artisan route:clear"
-
+alias sail="vendor/bin/sail"
 # Node
 alias nrw="npm run watch"
 alias nrd="npm run dev"
 alias nrp="npm run production"
-
+alias p="pnpm "
+#alias npm="pnpm "
 # Git
 alias status="git status"
 alias stash="git stash"
@@ -31,10 +32,11 @@ alias merge="git merge $1"
 alias checkout="git checkout $1"
 alias gs="git status"
 alias commit="git commit -m $1"
+alias wip="cosh 'wip'"
 # Tmux
 alias tma='tmux attach -d -t'
 
-alias reload="source ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+alias reload="source ~/.zshrc && echo 'ZSH config reloaded'"
 alias dev="cd ~/code/"
 alias sshkey="cat ~/.ssh/id_rsa.pub |pbcopy"
 alias valias="vim ~/.dotfiles/zsh/alias.zsh && reload"

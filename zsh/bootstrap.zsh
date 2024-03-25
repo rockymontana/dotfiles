@@ -19,9 +19,9 @@ if [[ -s "${DOTFILES}/vendor/prezto/init.zsh" ]]; then
 fi
 
 # Source default prezto config
-# if [[ -s "${DOTFILES}/.zpreztorc" ]]; then
-#   source "${DOTFILES}/.zpreztorc"
-# fi
+if [[ -s "${DOTFILES}/.zpreztorc" ]]; then
+  source "${DOTFILES}/.zpreztorc"
+fi
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -37,9 +37,9 @@ fi
 # Last of all we configure the theme from the config.
 autoload -Uz promptinit
 promptinit
-prompt $ZSH_THEME
-#echo "prompt ${ZSH_THEME}"
-zstyle ':prezto:module:prompt' theme $ZSH_THEME
+prompt ${ZSH_THEME}
+
+# zstyle ':prezto:module:prompt' theme $ZSH_THEME
 
 # Load all zsh-files from $DOTFILES/zsh
 for config in ${DOTFILES}/zsh/^bootstrap.zsh(.N); do

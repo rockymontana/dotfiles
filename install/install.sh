@@ -29,9 +29,10 @@ if [[ -f ${HOME}/.zshrc ]]; then
   mv ${HOME}/.zshrc ${HOME}/.zshrc.${time}
 fi
 ln -s ${DOTFILES}/conf/zshrc.conf ${HOME}/.zshrc
+ln -s ${DOTFILES}/conf/mackup.cgf ${HOME}/.mackup.cfg
 
 if [[ "$OSTYPE" == darwin* ]]; then
-  echo "Setting up OSX related shananagans"
+  echo "Setting up OSX related shenanigans"
   composerJSON=${DOTFILES}/composer/composer.osx.json
 
   # Update Homebrew recipes
@@ -51,11 +52,10 @@ echo "Installing Composer stuff"
 echo "composerJSON = ${composerJSON}"
 ln -s $composerJSON ${COMPOSER_HOME}/composer.json
 composer global install > /dev/null 2>&1
-echo "Everything installed!"
 
-echo "Installing vim stufs"
+echo "Installing vim stuff"
 ln -s ${DOTFILES}/conf/vim/.vimrc ${HOME}/.vimrc
 ln -s ${DOTFILES}/conf/vim/.vim_runtime ${HOME}/.vim_runtime
 
-cd ${HOME}
+echo "Everything installed!"
 source ${HOME}/.zshrc
